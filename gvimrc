@@ -1,6 +1,8 @@
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:›\ ,eol:¬,trail:·
+if has("gui_gtk2")
+    set listchars=tab:Â»\ ,eol:Â¬,trail:âˆ™
+endif
 
 " Font Setup for gvim
 if has("gui_running")
