@@ -36,6 +36,3 @@ nmap <leader>l :set list!
 nmap <leader>r :e $MYVIMRC
 
 
-
-
-

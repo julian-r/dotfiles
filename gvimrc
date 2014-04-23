@@ -19,9 +19,10 @@ if has("gui_running")
   endif
 endif
 
-
-
 colorscheme desert 
 
+" Display NERDTree
+"NERDTree
 
-
+" activate CtrlP
+"CtrlP
