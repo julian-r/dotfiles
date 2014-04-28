@@ -1,3 +1,5 @@
+set nocompatible
+
 " Pathogen load
 filetype off
 
@@ -34,5 +36,9 @@ nmap <leader>l :set list!
 
 " Shortcut to edit vimrc
 nmap <leader>r :e $MYVIMRC
+
+" switch between buffers	
+map <C-Down> :bn <CR>
+map <C-Up> :bN<CR>
 
 
