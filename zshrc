@@ -51,3 +51,6 @@ if [ -d $HOME/.phpbrew ]; then
     source $HOME/.phpbrew/bashrc
 fi
 
+
+export EDITOR=vim
+
