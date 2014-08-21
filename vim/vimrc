@@ -20,6 +20,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
+NeoBundle 'kien/ctrlp.vim'
 
 " Required:
 call neobundle#end()
@@ -34,6 +35,8 @@ set noshowmode
 
 let g:airline_theme             = 'powerlineish'
 let g:airline_powerline_fonts=1
+
+let g:airline#extensions#tabline#enabled = 1
 
 " session settings
 :let g:session_autosave = 'no'
