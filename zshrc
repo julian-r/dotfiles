@@ -103,6 +103,9 @@ fi
 # Python venv settings
 #
 
-
 export EDITOR=vim
+
+
+# Most apps look better with more colors
+TERM='xterm-256color'
 

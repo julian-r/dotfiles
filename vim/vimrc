@@ -1,21 +1,49 @@
-set nocompatible
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-" Pathogen load
-filetype off
+  " Required:
+  set runtimepath+=/home/julian/.vim/bundle/neobundle.vim/
+endif
 
-execute pathogen#infect()
+" Required:
+call neobundle#begin(expand('/home/julian/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+
+" PLUGINS
+NeoBundle 'bling/vim-airline'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
+
+" Required:
+call neobundle#end()
+filetype plugin indent on    " required
+
+""""""""""""""""""""""""""""""""""""""""""""
+" airline settings
+" want to have it also without splits
+set laststatus=2
+" don´t want to see mode indicator
+set noshowmode
+
+let g:airline_theme             = 'powerlineish'
+let g:airline_powerline_fonts=1
+
+" session settings
+:let g:session_autosave = 'no'
+
 
 " hidden buffers are okay
 set hidden
 
 syntax on
 filetype plugin indent on
-
-" Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-
 
 set expandtab
 set textwidth=79
@@ -35,7 +63,11 @@ set colorcolumn=79
 nmap <leader>l :set list!
 
 " Shortcut to edit vimrc
-nmap <leader>r :e $MYVIMRC
+nmap <leader>c :e $MYVIMRC
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost $MYVIMRC source $MYVIMRC
+endif
 
 " switch between buffers	
 map <C-Down> :bn <CR>
