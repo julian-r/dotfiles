@@ -3,11 +3,11 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   " Required:
-  set runtimepath+=/home/julian/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/julian/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -21,6 +21,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'wakatime/vim-wakatime'
 
 " Required:
 call neobundle#end()
@@ -40,6 +41,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " session settings
 :let g:session_autosave = 'no'
+nmap <leader>ss :SaveSession 
+nmap <leader>sl :LoadSession
 
 
 " hidden buffers are okay
