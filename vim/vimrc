@@ -21,7 +21,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'jelera/vim-javascript-syntax'
 
 " Required:
 call neobundle#end()
@@ -80,3 +82,18 @@ map <C-Down> :bn <CR>
 map <C-Up> :bN<CR>
 
 
+" OminComplete settings
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+
+" CtrlP settings
+" Ignore userdata directory
+ 
+
+set wildignore+=*/userdata/*
