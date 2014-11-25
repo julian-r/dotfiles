@@ -22,8 +22,8 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'lybrown/vim-pasm'
 
 " Required:
 call neobundle#end()
@@ -97,3 +97,8 @@ imap <C-@> <C-Space>
  
 
 set wildignore+=*/userdata/*
+
+
+" enable modline
+set modeline 
+
