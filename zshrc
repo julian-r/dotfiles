@@ -94,16 +94,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 
-# PHP Brew
-if [ -d $HOME/.phpbrew ]; then
-    source $HOME/.phpbrew/bashrc
-fi
-
-
-# Python venv settings
-#
-
-export EDITOR=vim
+export EDITOR=code -w
 
 
 # Most apps look better with more colors
