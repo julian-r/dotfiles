@@ -23,7 +23,7 @@ prompt adam2
 #
 HISTSIZE=20000
 SAVEHIST=$HISTSIZE
-HISTFILE="$CACHEDIR/history"
+# HISTFILE="$CACHEDIR/history"
 ## No double entries
 setopt HIST_IGNORE_DUPS
 
@@ -94,7 +94,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 
-export EDITOR=code -w
+export EDITOR="code -w"
 
 
 # Most apps look better with more colors
